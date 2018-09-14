@@ -1,7 +1,7 @@
 /**
- * @file test_default_ctor.cpp
+ * @file test_cstring_ctor.cpp
  *
- * Tests String class default constructor.
+ * Tests String class C string constructor.
  *
  * @author Michael John Decker, Ph.D. <mdecke@bsgu.edu>
  */
@@ -12,8 +12,6 @@
 #include <iostream>
 
 int main () {
-
-  int a;
 
     return 0;
 }
