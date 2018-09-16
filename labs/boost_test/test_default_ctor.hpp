@@ -1,25 +1,12 @@
-/**
- * @file test_default_ctor.cpp
- *
- * Tests String class default constructor.
- *
- * @author Michael John Decker, Ph.D. <mdecke@bsgu.edu>
- */
+BOOST_AUTO_TEST_SUITE(test_default_ctor)
 
-#include "string.hpp"
 
-#include <cassert>
-#include <iostream>
-
-int main () {
-
-  {
+BOOST_AUTO_TEST_CASE(typical) {
     String s;
 
-    assert(s.length() == 0);
-    assert(s.capacity() == (STRING_SIZE - 1));
-    //assert(s[0] == '\0');
-  }
-
-  return 0;
+    BOOST_TEST(s.length() == 0);
+    BOOST_TEST(s.capacity() == (STRING_SIZE - 1));
+    //BOOST_TEST(s[0] == '\0');
 }
+
+BOOST_AUTO_TEST_SUITE_END()

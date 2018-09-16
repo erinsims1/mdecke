@@ -1,17 +1,17 @@
-/**
- * @file test_equality.cpp
- *
- * Tests String class operator==(const String &)
- *
- * @author Michael John Decker, Ph.D. <mdecke@bsgu.edu>
- */
+BOOST_AUTO_TEST_SUITE(test_equality)
 
-#include "string.hpp"
+BOOST_AUTO_TEST_CASE(equals) {
+    String s = "abc";
+    String t = "abc";
 
-#include <cassert>
-#include <iostream>
-
-int main () {
-
-    return 0;
+    BOOST_TEST(s == t);
 }
+
+BOOST_AUTO_TEST_CASE(not_equals) {
+    String s = "abc";
+    String t = "xyz";
+
+    BOOST_TEST(!(s == t));
+}
+
+BOOST_AUTO_TEST_SUITE_END()
