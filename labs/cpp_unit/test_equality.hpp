@@ -29,8 +29,8 @@ public:
     }
 
     void tearDown() {
-	delete empty;
 	delete abc;
+	delete xyz;
     }
 
 
@@ -39,7 +39,7 @@ public:
     }
 
     void test_typical_not() {
-	CPPUNIT_ASSERT(*abc == empty);
+	CPPUNIT_ASSERT(!(*abc == *xyz));
     }
 
     CPPUNIT_TEST_SUITE(test_equality);
