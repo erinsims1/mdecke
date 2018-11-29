@@ -1,0 +1,22 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: debian:stretch
+    steps:
+      - checkout
+      - run: echo "Ran test job"
+  test:
+    docker:
+      - image: debian:stretch
+    steps:
+      - checkout
+      - run: echo "Ran test job"
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - test:
+        requires:
+          - build
