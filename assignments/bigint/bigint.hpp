@@ -27,7 +27,7 @@ public:
   bigint(int number);
   bigint(const char * number);
   
-  bool operator==(const bigint & rhs);
+  bool operator==(const bigint & rhs) const;
 
   int operator[](int pos) const;
 
