@@ -18,6 +18,8 @@ jobs:
       - image: srcml/ubuntu_x86_64_base
     steps:
       - checkout
+      - attach_workspace:
+          at: bin
       - run: ls
       - run: cd assignments/bigint &&
           make tests
