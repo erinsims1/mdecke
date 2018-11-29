@@ -15,7 +15,7 @@
 CPP  = g++
 OPTS = -g -Wall -W -Wunused -Wuninitialized -Wshadow -std=c++11
 
-TESTS = test_default_ctor test_int_ctor test_subscript
+TESTS = test_default_ctor
 
 ###############################################################
 # The first rule is run if only make is typed
@@ -32,8 +32,11 @@ msg:
 #
 tests: $(TESTS)
 	./test_default_ctor
-#	./test_int_ctor
-	./test_subscript
+
+###############################################################
+# Compile bigint type (REMOVE FOR ASSIGNMENT)
+bigint.o: bigint.hpp bigint.cpp
+	$(CPP) $(OPTS) -c bigint.cpp
 
 ###############################################################
 # Compile and run all tests - uses a wild card.
@@ -49,3 +52,5 @@ test_%.o: bigint.hpp test_%.cpp
 clean:
 	rm -f test_*.o
 	rm -f $(TESTS)
+# remove for assignment
+	rm -f bigint.o
