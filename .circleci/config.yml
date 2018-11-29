@@ -5,7 +5,7 @@ jobs:
       - image: ubuntu
     steps:
       - checkout
-      - run: ls -alh
+      - run: apt-get install build-essential
       - run: cd assignments/bigint &&
           make
   test:
