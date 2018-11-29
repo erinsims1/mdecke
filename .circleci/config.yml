@@ -2,13 +2,13 @@ version: 2
 jobs:
   build:
     docker:
-      - image: debian:stretch
+      - image: ubuntu
     steps:
       - checkout
       - run: echo "Ran test job"
   test:
     docker:
-      - image: debian:stretch
+      - image: ubuntu
     steps:
       - checkout
       - run: echo "Ran test job"
