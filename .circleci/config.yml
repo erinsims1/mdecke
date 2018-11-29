@@ -1,34 +1,10 @@
+# Simple Setup
 version: 2
 jobs:
-  build:
-    docker:
-      - image: srcml/ubuntu_x86_64_base
-    steps:
-      - checkout
-      - run: cd assignments/bigint &&
-          make bigint.o
-      - run: mkdir -p bin &&
-          mv assignments/bigint/bigint.o bin/
-      - persist_to_workspace:
-          root: bin
-          paths: 
-            - bigint.o
-  test:
-    docker:
-      - image: srcml/ubuntu_x86_64_base
-    steps:
-      - checkout
-      - attach_workspace:
-          at: bin
-      - run: cp bin/bigint.o assignments/bigint/
+    build:
+      docker:
+        - image: srcml/ubuntu_x86_64_base
+      steps:
+        - checkout
       - run: cd assignments/bigint &&
           make tests
-
-workflows:
-  version: 2
-  build_and_test:
-    jobs:
-      - build
-      - test:
-          requires:
-            - build
