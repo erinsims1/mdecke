@@ -2,13 +2,14 @@ version: 2
 jobs:
   build:
     docker:
-      - image: srcml/ubuntu_x86_64_base
+      - image: ubuntu
     steps:
       - checkout
-      - run: echo "Ran test job"
+      - run: cd assignments/bigint
+          make
   test:
     docker:
-      - image: srcml/ubuntu_x86_64_base
+      - image: ubuntu
     steps:
       - checkout
       - run: echo "Ran test job"
