@@ -2,16 +2,14 @@ version: 2
 jobs:
   build:
     docker:
-      - image: ubuntu
+      - image: srcml/ubuntu_x86_64_base
     steps:
       - checkout
-      - run: apt update
-      - run: yes | apt install build-essential
       - run: cd assignments/bigint &&
           make
   test:
     docker:
-      - image: ubuntu
+      - image: srcml/ubuntu_x86_64_base
     steps:
       - checkout
       - run: echo "Ran test job" &&
