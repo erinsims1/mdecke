@@ -12,7 +12,7 @@
 
 ###############################################################
 # Variables
-CPP  = clang++
+CPP  = g++
 OPTS = -g -Wall -W -Wunused -Wuninitialized -Wshadow -std=c++11
 
 TESTS = test_default_ctor test_int_ctor test_subscript
