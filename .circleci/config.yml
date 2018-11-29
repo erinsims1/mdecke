@@ -20,7 +20,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: bin
-      - run: mv bin/bigint.o assignments/bigint/
+      - run: cp bin/bigint.o assignments/bigint/
       - run: cd assignments/bigint &&
           make tests
 
