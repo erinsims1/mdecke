@@ -5,6 +5,7 @@ jobs:
       - image: ubuntu
     steps:
       - checkout
+      - run: ls -alh
       - run: cd assignments/bigint &&
           make
   test:
