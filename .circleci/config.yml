@@ -6,7 +6,7 @@ jobs:
     steps:
       - checkout
       - run: cd assignments/bigint &&
-          make
+          make tests
   test:
     docker:
       - image: srcml/ubuntu_x86_64_base
