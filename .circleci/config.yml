@@ -11,20 +11,20 @@
 
 # One illustrating Workflows
 version: 2
-  jobs:
-    build:
-      docker: 
-        - image: srcml/ubuntu_x86_64_base
-      steps:
-        - checkout
-        - run: echo "Hi I am the build container"
+jobs:
+  build:
+    docker: 
+      - image: srcml/ubuntu_x86_64_base
+    steps:
+      - checkout
+      - run: echo "Hi I am the build container"
 
-    test:
-      docker: 
-        - image: srcml/ubuntu_x86_64_base
-      steps:
-        - checkout
-        - run: echo "Hi I am the test container"
+  test:
+    docker: 
+      - image: srcml/ubuntu_x86_64_base
+    steps:
+      - checkout
+      - run: echo "Hi I am the test container"
 
 workflows:
   version: 2
