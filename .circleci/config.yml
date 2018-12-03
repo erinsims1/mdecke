@@ -5,4 +5,4 @@ jobs:
       - image: srcml/ubuntu_x86_64_base
     steps:
       - checkout
-      - run: echo "Hello World!!!"
+      - run: ls -alh
