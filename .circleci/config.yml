@@ -5,4 +5,5 @@ jobs:
       - image: srcml/ubuntu_x86_64_base
     steps:
       - checkout
-      - run: ls -alh
+      - run: cd assignments/bigint
+      - run: make tests
