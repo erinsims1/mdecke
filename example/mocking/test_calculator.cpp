@@ -14,7 +14,7 @@
 
 class view_t {
 public:
-    virtual display(int result) = 0;
+    virtual void display(int result) = 0;
 }
 
 class calculator_t {
