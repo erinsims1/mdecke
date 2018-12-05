@@ -22,7 +22,7 @@ jobs:
       - persist_to_workspace:
           root: bin
           paths:
-	    - bigint.o
+            - bigint.o
 
   test:
     docker: 
@@ -32,7 +32,7 @@ jobs:
       - attach_workspace:
           at: bin
       - run: cp bin/bigint.o assignments/bigint/
-      - run: cd	assignments/bigint && make tests
+      - run: cd assignments/bigint && make tests
 
 workflows:
   version: 2
